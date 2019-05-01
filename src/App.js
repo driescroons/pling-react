@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import notify from "../../pling-package/lib";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false,
+      done: false,
+      error: false
+    };
+  }
+
+  notify = async () => {
+    this.setState({ loading: true });
+    // nice loading animation
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      await notify({
+        key: "1556318416501",
+        title: "Pling from the package!",
+        description: "👋 👋 👋 👋"
+      });
+      this.setState({ done: true, loading: false });
+    } catch (error) {
+      this.setState({ error: true, loading: false });
+    }
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>Pling Notifier</h1>
+          <h3>Let's test a pling!</h3>
+          {this.state.error ? (
+            <p>Something went wrong!</p>
+          ) : this.state.loading ? (
+            <p>Sending a pling!</p>
+          ) : this.state.done ? (
+            <p>Plinged!</p>
+          ) : (
+            <button type="button" onClick={this.notify}>
+              Pling
+            </button>
+          )}
+        </header>
+      </div>
+    );
+  }
 }
 
 export default App;
