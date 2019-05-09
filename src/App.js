@@ -19,7 +19,7 @@ class App extends Component {
     await new Promise(resolve => setTimeout(resolve, 1000));
     try {
       await notify({
-        key: "1556318416501",
+        key: process.env.PLING_API_KEY,
         title: "Pling from the package!",
         description: "👋 👋 👋 👋"
       });
