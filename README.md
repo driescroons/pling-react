@@ -4,19 +4,19 @@ This is the official pling [Create React App](https://github.com/facebook/create
 
 ## 👉 Implementation
 
-Implemeting it is quite easy. First install it.
+Implemeting it is quite easy. First install it:
 
 ```
 yarn add pling
 ```
 
-Import the package
+Import the package:
 
 ```
 import notify from "pling";
 ```
 
-Copy and paste the following where you'd like to log something.
+Copy and paste the following where you'd like to log something:
 
 ```
  await notify({
@@ -28,7 +28,7 @@ Copy and paste the following where you'd like to log something.
 
 Please make sure to set your **PLING_API_KEY** environment variable.
 
-In create react app, you can do so by creating a **.env** file in the root and specifying the following. Make sure to change the **_PLING_API_KEY_** to **_REACT_APP_PLING_API_KEY_**
+In create react app, you can do so by creating a **.env** file in the root and specifying the following. Make sure to change the **_PLING_API_KEY_** to **_REACT_APP_PLING_API_KEY_**:
 
 ```
 REACT_APP_PLING_API_KEY=YOUR_API_KEY_HERE
