@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import notify from "../../pling-package/lib";
+import notify from "pling";
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class App extends Component {
     await new Promise(resolve => setTimeout(resolve, 1000));
     try {
       await notify({
-        key: process.env.PLING_API_KEY,
+        key: process.env.REACT_APP_PLING_API_KEY,
         title: "Pling from the package!",
         description: "👋 👋 👋 👋"
       });

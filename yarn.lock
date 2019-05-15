@@ -6022,8 +6022,9 @@ pkg-up@2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-"pling@file:../pling-package":
-  version "1.0.0"
+pling@^1.0.0-rc.5:
+  version "1.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/pling/-/pling-1.0.0-rc.5.tgz#0f266585e68f5dc99a56cae779de05cb7b7478ae"
 
 pn@^1.1.0:
   version "1.1.0"
