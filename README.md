@@ -1,6 +1,6 @@
 # 🔔 Pling
 
-This is the official pling [Create React App](https://github.com/facebook/create-react-app) example. Checkout the official [package](https://github.com/driescroons/pling)/
+This is the official pling [Create React App](https://github.com/facebook/create-react-app) example. Checkout the official [package](https://github.com/driescroons/pling).
 
 ## 👉 Implementation
 
