@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import notify from "pling";
+import * as notify from "pling";
 
 class App extends Component {
   constructor(props) {
